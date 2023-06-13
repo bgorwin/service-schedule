@@ -9,4 +9,30 @@ html {
 
 .custom-img {
   background-image: url('../../public/images/harley-davidson-QD6GvrDFPAA-unsplash.jpg');
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-bg-img-1 {
+  background-image: url('../../public/images/gareth-david-m0chaAschUw-unsplash.jpg');
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-glass {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.36);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border: 1px solid rgba(255, 255, 255, 0.43);
+}
+
+
+.icon-md svg {
+  width: 20px;
+  height: 20px;
 }
