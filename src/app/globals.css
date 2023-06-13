@@ -14,6 +14,13 @@ html {
   background-repeat: no-repeat;
 }
 
+.media-text-image-1 {
+  background-image: url('../../public/images/aditya-joshi-EfdSPgdE958-unsplash.jpg');
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .section-bg-img-1 {
   background-image: url('../../public/images/gareth-david-m0chaAschUw-unsplash.jpg');
   object-fit: cover;

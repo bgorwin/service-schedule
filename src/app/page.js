@@ -53,7 +53,8 @@ export default function Home() {
 
 			<section className='h-screen'>
 				<MediaText
-					src='/../public/images/aditya-joshi-EfdSPgdE958-unsplash.jpg'
+					className='media-text-image-1'
+					src=''
 					heading='Customer service starts with communication'
 					text='Color status indicators help you with tracking each customer and notifying them of their repairs.'
 				/>
