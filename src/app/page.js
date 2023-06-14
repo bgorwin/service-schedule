@@ -16,6 +16,9 @@ export default function Home() {
 			<section className='h-[600px] flex flex-col items-center justify-center container mx-auto'>
 				<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 bg-glass p-5 text-black'>
 					<div className='p-3 flex flex-col justify-center align-center'>
+						<p className='text-gray-600 text-lg ps-1 underline underline-offset-4 mb-2'>
+							Purpose
+						</p>
 						<h2 className='text-4xl  mb-5'>
 							Help your
 							<br />
