@@ -55,7 +55,7 @@ const CustomerForm = () => {
             onChange={(e) => setMotorcycle(e.target.value)}
             className="border rounded py-2 px-3 w-full"
             required
-          />
+          />  
         </div>
 
         <div className="mb-4">
