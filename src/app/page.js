@@ -62,6 +62,8 @@ export default function Home() {
 					text='Color status indicators help you with tracking each customer and notifying them of their repairs.'
 				/>
 			</section>
+
+			<section></section>
 		</div>
 	);
 }
