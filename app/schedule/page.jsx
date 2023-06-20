@@ -1,7 +1,7 @@
-import Navbar from '../../../components/Navbar';
-import Hero from '../../../components/Hero';
-import CustomerList from '../../../components/CustomerList';
-import CustomerForm from '../../../components/CustomerForm';
+import Navbar from '../../components/Navbar';
+import Hero from '../../components/Hero';
+import CustomerList from '../../components/CustomerList';
+import CustomerForm from '../../components/CustomerForm';
 
 export default function Schedule() {
     return (
