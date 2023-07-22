@@ -8,6 +8,8 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import MediaText from "../components/MediaText";
+import BannerDivider from "../components/BannerDivider";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
 	return (
@@ -16,6 +18,7 @@ export default function HomePage() {
 			<Hero
 				heading='Service Schedule'
 				message='Organize and prioritize all your service orders'
+				image="custom-img"
 			/>
 
 			<section className='h-[600px] flex flex-col items-center justify-center container mx-auto'>
@@ -59,7 +62,7 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className='h-screen'>
+			<section className='mt-10 mb-10'>
 				<MediaText
 					className='media-text-image-1'
 					src=''
@@ -68,7 +71,11 @@ export default function HomePage() {
 				/>
 			</section>
 
-			<section></section>
+			<section>
+				<BannerDivider />
+			</section>
+
+			<Footer />
 		</div>
 	);
 }

@@ -1,21 +1,14 @@
 import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
-import CustomerList from '../../components/CustomerList';
-import CustomerForm from '../../components/CustomerForm';
+
 
 export default function Schedule() {
     return (
         <div className=" h-screen">
             <Navbar />
-            <Hero heading="Schedule Dashboard" />
+            <Hero heading="Schedule Dashboard" image="media-text-image-1" />
 
-            <section className="mt-10">
-                <CustomerForm   />
-            </section>
-
-            <section className="py-12">
-                <CustomerList />
-            </section>
+            
         </div>
     );
 }
