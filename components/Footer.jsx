@@ -12,7 +12,7 @@ export default function Footer() {
                         <h4 className="text-xl">Service Schedule</h4>
                     </div>
                     <div className="text-center md:text-end lg:text-end text-orange-500">
-                        <p>&copy; {currentYear} Brent Gorwin All rights reserved.</p>
+                        <p>&copy; {currentYear} Brent Gorwin All rights reserved. </p>
                     </div>
                 </div>
             </div>
