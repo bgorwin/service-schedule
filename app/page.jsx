@@ -1,5 +1,5 @@
 'use client'
- 
+
 // This is a Client Component. It receives data as props and
 // has access to state and effects just like Page components
 // in the `pages` directory.
@@ -9,11 +9,11 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import MediaText from "../components/MediaText";
 import BannerDivider from "../components/BannerDivider";
-import Footer from "../components/Footer";
+
 
 export default function HomePage() {
 	return (
-		<div className=' text-white'>
+		<div className=' text-white bg-black'>
 			<Navbar />
 			<Hero
 				heading='Service Schedule'
@@ -22,7 +22,7 @@ export default function HomePage() {
 			/>
 
 			<section className='h-[600px] flex flex-col items-center justify-center container mx-auto'>
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 bg-glass p-5 text-black'>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 bg-white p-5 text-black rounded-md'>
 					<div className='p-3 flex flex-col justify-center align-center'>
 						<p className='text-gray-600 text-lg ps-1 underline underline-offset-4 mb-2'>
 							Purpose
@@ -74,8 +74,6 @@ export default function HomePage() {
 			<section>
 				<BannerDivider />
 			</section>
-
-			<Footer />
 		</div>
 	);
 }

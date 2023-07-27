@@ -1,4 +1,15 @@
 import '../globals.css';
+import { Montserrat } from '@next/font/google';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+ 
+const montserrat = Montserrat({
+  // Specifying weight is only required for
+  // non-variable fonts.
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -6,8 +17,12 @@ export default function RootLayout({
   children,
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={montserrat.className}>
+      <body className="mb-0">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

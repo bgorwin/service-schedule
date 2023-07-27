@@ -11,8 +11,8 @@ export default function MediaText({ src, heading, text}) {
                 </div>
                 <div className="p-5 flex flex-col self-center text-black">
                     <p className="text-base font-bold text-orange-500">Service Communication</p>
-                    <h1 className="text-4xl mb-4">{heading}</h1>
-                    <p className="text-xl">{text}</p>
+                    <h1 className="text-4xl mb-4 text-white">{heading}</h1>
+                    <p className="text-xl text-white">{text}</p>
                 </div>
             </div>
         </div>
