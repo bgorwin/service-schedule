@@ -17,8 +17,8 @@ export default function RootLayout({
   children,
 }) {
   return (
-    <html lang="en" className={montserrat.className}>
-      <body className="mb-0">
+    <html lang="en" className={`${montserrat.className}`}>
+      <body>
         <Navbar />
         {children}
         <Footer />

@@ -21,8 +21,8 @@ export default function HomePage() {
 				image="custom-img"
 			/>
 
-			<section className='h-[600px] flex flex-col items-center justify-center container mx-auto'>
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 bg-white p-5 text-black rounded-md'>
+			<section className='py-40 flex flex-col items-center justify-center bg-white w-screen'>
+				<div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-5 text-black rounded-md bg-gray-200'>
 					<div className='p-3 flex flex-col justify-center align-center'>
 						<p className='text-gray-600 text-lg ps-1 underline underline-offset-4 mb-2'>
 							Purpose
@@ -62,7 +62,7 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			<section className='mt-10 mb-10'>
+			<section className='py-40'>
 				<MediaText
 					className='media-text-image-1'
 					src=''
