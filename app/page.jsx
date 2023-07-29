@@ -71,9 +71,40 @@ export default function HomePage() {
 				/>
 			</section>
 
-			<section>
+			<section className="py-36 bg-white">
+				<div class="container mx-auto">
+					<div class="grid grid-flow-row grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-between mt-8">
+						<div class="col px-4 my-5">
+							<div class="bg-white p-4 rounded-lg shadow h-full">
+								<h3 class="text-xl font-bold mb-2 text-orange-500">Card 1</h3>
+								<p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<button class="bg-black text-white hover:text-orange-500 px-4 py-2 mt-10 rounded-md">Button</button>
+							</div>
+						</div>
+
+						<div class="col px-4 my-5">
+							<div class="bg-white p-4 rounded-lg shadow h-full">
+								<h3 class="text-xl font-bold mb-2 text-orange-500">Card 2</h3>
+								<p class="text-gray-600">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<button class="bg-black text-white hover:text-orange-500 px-4 py-2 mt-10 rounded-md">Button</button>
+							</div>
+						</div>
+
+						<div class="col px-4 my-5">
+							<div class="bg-white p-4 rounded-lg shadow h-full">
+								<h3 class="text-xl font-bold mb-2 text-orange-500">Card 3</h3>
+								<p class="text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+								<button class="bg-black text-white hover:text-orange-500 px-4 py-2 mt-10 rounded-md">Button</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className='py-36'>
 				<BannerDivider />
 			</section>
+
 		</div>
 	);
 }

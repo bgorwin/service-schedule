@@ -1,4 +1,4 @@
-// `pages` directory
+// `app` directory
  
 export async function getServerSideProps() {
     const res = await fetch(`https://...`)
