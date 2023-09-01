@@ -6,13 +6,15 @@ export default function Customers() {
     return (
         <div>
             <Hero heading="Customer Dashboard" image="custom-img" />
-        
-            <section className="mt-10">
-                <CustomerForm   />
-            </section>
+
             <section className="py-12">
                 <CustomerList />
             </section>
+            
+            <section className="mt-10">
+                <CustomerForm   />
+            </section>
+            
         
         </div>
     );
