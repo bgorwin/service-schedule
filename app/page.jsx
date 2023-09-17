@@ -93,7 +93,7 @@ export default function HomePage() {
 						<div class="col px-4 my-5">
 							<div class="bg-white p-4 rounded-lg shadow h-full">
 								<h3 class="text-xl font-bold mb-2 text-orange-500">Service completed</h3>
-								<p class="text-gray-600">When you're done with the repairs, update the status to "Done" and be prompted to reach out to the customer.</p>
+								<p class="text-gray-600">When youre done with the repairs, update the status to Done and be prompted to reach out to the customer.</p>
 								{/* <button class="bg-black text-white hover:text-orange-500 px-4 py-2 mt-10 rounded-md">Button</button> */}
 							</div>
 						</div>
