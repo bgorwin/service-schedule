@@ -2,69 +2,97 @@
 
 import React, { useState } from 'react';
 
-const AddCustomerForm = ({ onAdd }) => {
-  const [customerName, setCustomerName] = useState('');
-  const [motorcycle, setMotorcycle] = useState('');
-  const [status, setStatus] = useState('checked-in');
-  const [dateCheckedIn, setDateCheckedIn] = useState('');
+const AddCustomerForm = ({ onFormSubmit }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    motorcycle: '',
+    status: 'checked-in',
+    dateCheckedIn: '',
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create an object with the form values
-    const newItem = {
-      customerName,
-      motorcycle,
-      status,
-      dateCheckedIn,
-    };
-
-    // Pass the new item to the parent component
-    onAdd(newItem);
-
-    // Clear the form inputs
-    setCustomerName('');
-    setMotorcycle('');
-    setStatus('checked-in');
-    setDateCheckedIn('');
+    onFormSubmit(formData);
+    setFormData({
+      name: '',
+      motorcycle: '',
+      status: 'checked-in',
+      dateCheckedIn: '',
+    });
+  };
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Customer Name:
+    <form onSubmit={handleSubmit} className="p-4">
+      <div className="mb-4">
+        <label htmlFor="name" className="block text-gray-700 text-sm font-semibold mb-2">
+          Name:
+        </label>
         <input
           type="text"
-          value={customerName}
-          onChange={(e) => setCustomerName(e.target.value)}
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full border rounded p-2"
+          required
         />
-      </label>
-      <label>
-        Motorcycle:
+      </div>
+      <div className="mb-4">
+        <label htmlFor="motorcycle" className="block text-gray-700 text-sm font-semibold mb-2">
+          Motorcycle:
+        </label>
         <input
           type="text"
-          value={motorcycle}
-          onChange={(e) => setMotorcycle(e.target.value)}
+          id="motorcycle"
+          name="motorcycle"
+          value={formData.motorcycle}
+          onChange={handleChange}
+          className="w-full border rounded p-2"
+          required
         />
-      </label>
-      <label>
-        Status:
-        <select value={status} onChange={(e) => setStatus(e.target.value)}>
+      </div>
+      <div className="mb-4">
+        <label htmlFor="status" className="block text-gray-700 text-sm font-semibold mb-2">
+          Status:
+        </label>
+        <select
+          id="status"
+          name="status"
+          value={formData.status}
+          onChange={handleChange}
+          className="w-full border rounded p-2"
+        >
           <option value="checked-in">Checked In</option>
           <option value="on-lift">On Lift</option>
           <option value="completed">Completed</option>
         </select>
-      </label>
-      <label>
-        Date Checked In:
+      </div>
+      <div className="mb-4">
+        <label htmlFor="dateCheckedIn" className="block text-gray-700 text-sm font-semibold mb-2">
+          Date Checked In:
+        </label>
         <input
           type="date"
-          value={dateCheckedIn}
-          onChange={(e) => setDateCheckedIn(e.target.value)}
+          id="dateCheckedIn"
+          name="dateCheckedIn"
+          value={formData.dateCheckedIn}
+          onChange={handleChange}
+          className="w-full border rounded p-2"
+          required
         />
-      </label>
-      <button type="submit">Add Item</button>
+      </div>
+      <button type="submit" className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+        Submit
+      </button>
     </form>
   );
 };
 
 export default AddCustomerForm;
+
+

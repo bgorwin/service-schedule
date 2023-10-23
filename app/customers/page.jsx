@@ -6,22 +6,22 @@ import CustomerList from '../../components/CustomerList';
 import AddCustomerForm from '../../components/AddCustomerForm';
 
 export default function Customers() {
-    const [items, setItems] = useState([]);
+    const [customers, setCustomers] = useState([]);
 
-    const handleAddItem = (newItem) => {
-        setItems([...items, newItem]);
+    const handleFormSubmit = (formData) => {
+        setCustomers([...customers, formData]);
     };
 
     return (
-        <div>
+        <div >
             <Hero heading="Customer Dashboard" image="custom-img" />
 
-            <section className="py-12">
-                <CustomerList items={items}  />
+            <section className="py-12 container mx-auto">
+                <CustomerList customers={customers}/>
             </section>  
 
-            <section className="py-12">
-                <AddCustomerForm onAdd={handleAddItem} />    
+            <section className="py-12 container mx-auto">
+                <AddCustomerForm  onFormSubmit={handleFormSubmit}  />    
             </section>          
         </div>
     );

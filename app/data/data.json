@@ -1,0 +1,20 @@
+ [
+    {
+        "name": "Brent G",
+        "motorcycle": "2021 Honda Monkey",
+        "status": "Checked In",
+        "dateCheckedIn": "10-31-2023"
+    },
+    {
+        "name": "John D",
+        "motorcycle": "2023 Harley Softtail",
+        "status": "Checked In",
+        "dateCheckedIn": "10-25-2023"
+    },
+    {
+        "name": "Richard",
+        "motorcycle": "2020 Harley Fatbob ",
+        "status": "Checked In",
+        "dateCheckedIn": "10-1-2023"
+    }
+]
