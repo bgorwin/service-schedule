@@ -38,9 +38,9 @@ export default function Navbar() {
 					<li className='p-4' style={{color: `${textColor}`}}>
 						<Link href='/customers' className="hover:text-orange-500 ">View Customers</Link>
 					</li>
-					<li className='p-4' style={{color: `${textColor}`}}>
+					{/* <li className='p-4' style={{color: `${textColor}`}}>
 						<Link href='/schedule' className="hover:text-orange-500 ">View Schedule</Link>
-					</li>
+					</li> */}
 				</ul>
 
 				{/* Mobile Button */}
@@ -54,9 +54,9 @@ export default function Navbar() {
 						<li className='p-4 text-4xl hover:text-gray-500 ease-in-out duration-300'>
 							<Link href='/customers'>View Customers</Link>
 						</li>
-						<li className='p-4 text-4xl hover:text-gray-500 ease-in-out duration-300'>
+						{/* <li className='p-4 text-4xl hover:text-gray-500 ease-in-out duration-300'>
 							<Link href='/schedule'>View Schedule</Link>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 			</div>

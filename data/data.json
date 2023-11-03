@@ -16,5 +16,11 @@
         "motorcycle": "2020 Harley Fatbob ",
         "status": "Checked In",
         "dateCheckedIn": "10-1-2023"
+    },
+    {
+        "name": "Russ",
+        "motorcycle": "2022 Harley Street Glide CVO ",
+        "status": "Checked In",
+        "dateCheckedIn": "10-1-2023"
     }
-]
+] 
