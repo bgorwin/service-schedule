@@ -1,69 +1,62 @@
-"use client"
-
 import React, { useState } from 'react';
 
-const AddCustomerForm = ({ onFormSubmit }) => {
+const AddCustomerForm = ({ onSubmit }) => {
+  "use client";
   const [formData, setFormData] = useState({
+    // define form fields here
     name: '',
     motorcycle: '',
-    status: 'checked-in',
+    status: '',
     dateCheckedIn: '',
+    // add more fields as needed
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onFormSubmit(formData);
-    setFormData({
-      name: '',
-      motorcycle: '',
-      status: 'checked-in',
-      dateCheckedIn: '',
-    });
-  };
-  
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    onSubmit(formData);
   };
 
   return (
     <form onSubmit={handleSubmit} className="p-4">
       <div className="mb-4">
-        <label htmlFor="name" className="block text-gray-700 text-sm font-semibold mb-2">
+        <label className="block text-gray-700 text-sm font-semibold mb-2">
           Name:
         </label>
         <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
+          type="text" 
+          name="name" 
+          value={formData.name} 
           onChange={handleChange}
           className="w-full border rounded p-2"
           required
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="motorcycle" className="block text-gray-700 text-sm font-semibold mb-2">
+        <label className="block text-gray-700 text-sm font-semibold mb-2">
           Motorcycle:
         </label>
         <input
-          type="text"
-          id="motorcycle"
-          name="motorcycle"
-          value={formData.motorcycle}
+          type="text" 
+          name="motorcycle" 
+          value={formData.motorcycle} 
           onChange={handleChange}
           className="w-full border rounded p-2"
           required
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="status" className="block text-gray-700 text-sm font-semibold mb-2">
+        <label className="block text-gray-700 text-sm font-semibold mb-2">
           Status:
         </label>
         <select
-          id="status"
-          name="status"
-          value={formData.status}
+          type="text" 
+          name="status" 
+          value={formData.status} 
           onChange={handleChange}
           className="w-full border rounded p-2"
         >
@@ -73,14 +66,14 @@ const AddCustomerForm = ({ onFormSubmit }) => {
         </select>
       </div>
       <div className="mb-4">
-        <label htmlFor="dateCheckedIn" className="block text-gray-700 text-sm font-semibold mb-2">
+        <label 
+          className="block text-gray-700 text-sm font-semibold mb-2">
           Date Checked In:
         </label>
         <input
-          type="date"
-          id="dateCheckedIn"
-          name="dateCheckedIn"
-          value={formData.dateCheckedIn}
+          type="date" 
+          name="dateCheckedIn" 
+          value={formData.dateCheckedIn} 
           onChange={handleChange}
           className="w-full border rounded p-2"
           required

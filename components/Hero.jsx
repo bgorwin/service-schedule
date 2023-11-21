@@ -11,7 +11,7 @@ export default function Hero({ heading, message, image }) {
                 <p className="py-5 text-xl">{message}</p>
                 
                 <div className="mt-10">
-                    <a href="/schedule" className="hover:bg-white hover:text-black px-8 py-2 border">View Dashboard</a> 
+                    <a href="/customers" className="hover:bg-white hover:text-black px-8 py-2 border">View Workorders</a> 
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import logo from '../public/images/white-logo.png';
 
 export default function Navbar() {
 	const [nav, setNav] = useState(false);
@@ -17,8 +18,8 @@ export default function Navbar() {
 	useEffect(() => {
 		const changeColor = () => {
 			if(window.scrollY > 90){
-				setColor('#fff');
-				setTextColor('#000000')
+				setColor('#000000');
+				setTextColor('#fff')
 			} else {
 				setColor('transparent')
 				setTextColor('#fff')
@@ -28,10 +29,11 @@ export default function Navbar() {
 	}, [])
 
 	return (
-		<div className='fixed p-3 w-full z-10 ease-in duration-300 border-b-2 border-gray-600 ' style={{backgroundColor: `${color}`}}>
+		<div className='fixed p-3 w-full z-10 ease-in duration-300 ' style={{backgroundColor: `${color}`}}>
 			<div className='max-w-[1240px] m-auto flex justify-between items-center'>
 				<Link href='/'>
-					<h1 style={{color: `${textColor}`}}>Service Schedule BG</h1>
+					<Image className="fill-current text-white" src={logo} alt="Service Schedule white outline logo." width={150} height={100} />
+					{/* <h1 style={{color: `${textColor}`}}>Service Schedule BG</h1> */}
 				</Link>
 
 				<ul className='hidden sm:flex'>
