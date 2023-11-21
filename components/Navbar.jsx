@@ -8,7 +8,7 @@ import logo from '../public/images/white-logo.png';
 export default function Navbar() {
 	const [nav, setNav] = useState(false);
 
-	const [color, setColor] = useState('transparent');
+	const [color, setColor] = useState('rgba(0,0,0,0.3)');
 	const [textColor, setTextColor] = useState('#fff');
 
 	const handleNav = () => {
@@ -21,7 +21,7 @@ export default function Navbar() {
 				setColor('#000000');
 				setTextColor('#fff')
 			} else {
-				setColor('transparent')
+				setColor('rgba(0,0,0,0.3)')
 				setTextColor('#fff')
 			}
 		};
