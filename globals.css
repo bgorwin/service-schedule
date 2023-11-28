@@ -8,15 +8,29 @@ html {
 }
 
 .custom-img {
-  background-image: url('./public/images/harley-davidson-QD6GvrDFPAA-unsplash.jpg');
-  object-fit: cover;
+  background-image: url('./public/images/harley-davidson-qbpM-CLCRtg-unsplash.jpg');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.workorder-img {
+  background-image: url('./public/images/aaron-huber-KxeFuXta4SE-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-img {
+  background-image: url('./public/images/harley-davidson--GE-xOGTt3w-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .media-text-image-1 {
   background-image: url('./public/images/aditya-joshi-EfdSPgdE958-unsplash.jpg');
-  object-fit: cover;
+  background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
 }

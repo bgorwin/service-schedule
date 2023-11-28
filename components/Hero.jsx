@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Hero({ heading, message, image }) {
+export default function Hero({ heading, message, image, buttonText, buttonLink }) {
     return (
-        <div className={`flex items-center justify-center h-[80vh]  bg-fixed bg-cover ${image}`}>
+        <div className={`flex items-center justify-center h-[80vh] bg-fixed object-fill ${image}`}>
             {/* Overlay */}
             <div className="absolute top-0 left-0 right-0 bottom-0 w-3/4 h-[80vh] bg-gradient-to-r from-black to-transparent z-[2]" />
 
@@ -11,7 +11,7 @@ export default function Hero({ heading, message, image }) {
                 <p className="py-5 text-xl">{message}</p>
                 
                 <div className="mt-10">
-                    <a href="/customers" className="hover:bg-white hover:text-black px-8 py-2 border">View Workorders</a> 
+                    <a href={buttonLink} className="hover:bg-white hover:text-black px-8 py-2 border">{buttonText}</a> 
                 </div>
             </div>
         </div>

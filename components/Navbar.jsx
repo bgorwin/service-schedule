@@ -38,11 +38,11 @@ export default function Navbar() {
 
 				<ul className='hidden sm:flex'>
 					<li className='p-4' style={{color: `${textColor}`}}>
-						<Link href='/customers' className="hover:text-orange-500 ">View Customers</Link>
+						<Link href='/customers' className="hover:text-orange-500 ">View Workorders</Link>
 					</li>
-					{/* <li className='p-4' style={{color: `${textColor}`}}>
-						<Link href='/schedule' className="hover:text-orange-500 ">View Schedule</Link>
-					</li> */}
+					<li className='p-4' style={{color: `${textColor}`}}>
+						<Link href='/about' className="hover:text-orange-500 ">About</Link>
+					</li>
 				</ul>
 
 				{/* Mobile Button */}

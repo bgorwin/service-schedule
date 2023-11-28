@@ -19,6 +19,8 @@ export default function HomePage() {
 				heading='Service Schedule'
 				message='Organize and prioritize all your service orders'
 				image="custom-img"
+				buttonLink="/customers"
+				buttonText="View Workorders"
 			/>
 
 			<section className='py-40 flex flex-col items-center justify-center bg-white w-screen'>
