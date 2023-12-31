@@ -5,6 +5,30 @@ import { promises as fs } from 'fs';
 
 
 const WorkorderList = ({ data: initialData }) => {
+    // Adding a new item from form to the list
+    const [formData, setFormData] = useState({
+        name: '',
+        motorcycle: '',
+        status: '',
+        dateCheckedIn: '',
+    });
+    const [items, setItems] = useState([]);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Optional: Add validation or other logic before adding the item
+        setItems([...items, formData]); // Add the formData to the items array
+        setFormData({ name: '', motorcycle: '', status: '', dateCheckedIn: '' }); // Clear the form
+    };
+
 
     const [data, setData] = useState(initialData);
 
@@ -37,16 +61,81 @@ const WorkorderList = ({ data: initialData }) => {
               <td className="border p-2">{entry.motorcycle}</td>
               <td className="border p-2">{entry.status}</td>
               <td className="border p-2">{entry.dateCheckedIn}</td>
-              <td className="border p-2"><button
-              onClick={() => handleDelete(index)}
-              className="border border-orange-400 text-black hover:bg-black hover:text-white px-2 py-1 rounded-md"
-            >
-              Delete
-            </button></td>
+              <td className="border p-2">
+                <button
+                  onClick={() => handleDelete(index)}
+                  className="border border-orange-400 text-black hover:bg-black hover:text-white px-2 py-1 rounded-md  transition duration-200">Delete</button>
+              </td>
             </tr>
           ))}
+          {items.map((item, index) => (
+              <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
+                  <td className="border p-2">{item.name}</td>
+                  <td className="border p-2">{item.motorcycle}</td>
+                  <td className="border p-2">{item.status}</td>
+                  <td className="border p-2">{item.dateCheckedIn}</td>
+                  <td className="border p-2">
+                    <button
+                      onClick={() => handleDelete(index)}
+                      className="border border-orange-400 text-black hover:bg-black hover:text-white px-2 py-1 rounded-md  transition duration-200">Delete</button>
+                  </td>
+              </tr>
+          ))}
+
         </tbody>
       </table>
+
+      <div className="container mx-auto pt-10 pb-10">
+        <p className="text-xl">Add a New Customer</p>
+        <hr />
+        <form onSubmit={handleSubmit} className="flex flex-row mb-6 mt-6 gap-5">
+            <div className="">
+                <input 
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Name"
+                    className="shadow shadow-sm border rounded py-2 px-3 text-grey-darker"
+                />
+            </div>
+            <div className="">
+                <input 
+                    type="text"
+                    name="motorcycle"
+                    value={formData.motorcycle}
+                    onChange={handleInputChange}
+                    placeholder="Motorcycle"
+                    className="shadow shadow-sm border rounded py-2 px-3 text-grey-darker"
+                />
+            </div>
+            <div className="">
+                <input 
+                    type="text"
+                    name="status"
+                    value={formData.status}
+                    onChange={handleInputChange}
+                    placeholder="Status"
+                    className="shadow shadow-sm border rounded py-2 px-3 text-grey-darker"
+                />
+            </div>
+            <div className="">
+                <input 
+                    type="date"
+                    name="dateCheckedIn"
+                    value={formData.dateCheckedIn}
+                    onChange={handleInputChange}
+                    className="shadow shadow-sm border rounded py-2 px-3 text-grey-darker"
+                />
+            </div>
+            <div>
+            
+            </div>
+            <button type="submit" className="border border-orange-400 text-black hover:bg-black hover:text-white px-2 py-1 rounded-md  transition duration-200">
+                Add Entry
+            </button>
+        </form>
+      </div>
     </div>
   );
 };
