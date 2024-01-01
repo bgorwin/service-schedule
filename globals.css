@@ -7,6 +7,7 @@ html {
   /* font-family: 'Raleway', sans-serif; */
 }
 
+
 .custom-img {
   background-image: url('./public/images/harley-davidson-qbpM-CLCRtg-unsplash.jpg');
   background-size: cover;
@@ -22,7 +23,7 @@ html {
 }
 
 .about-img {
-  background-image: url('./public/images/harley-davidson--GE-xOGTt3w-unsplash.jpg');
+  background-image: url('./public/images/natasha-miller-KGlqPl1fXj8-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,4 +57,37 @@ html {
 .icon-md svg {
   width: 20px;
   height: 20px;
+}
+
+.animate-right-to-left {
+  animation: fadeInRightToLeft 2s ease-in-out forwards;
+}
+
+.animate-left-to-right {
+  animation: fadeInLeftToRight 2s ease-in-out forwards;
+}
+
+
+/* Animations */
+
+@keyframes fadeInRightToLeft {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeftToRight {
+  from {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
