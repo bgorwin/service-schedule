@@ -64,7 +64,7 @@ const WorkorderList = ({ data: initialData }) => {
               <td className="border p-2">
                 <button
                   onClick={() => handleDelete(index)}
-                  className="border border-orange-400 text-black hover:bg-black hover:text-white px-2 py-1 rounded-md  transition duration-200">Delete</button>
+                  className="border border-orange-400 text-black hover:bg-black hover:text-white px-2 py-1 rounded-md  transition duration-200 opacity-0">Delete</button>
               </td>
             </tr>
           ))}
