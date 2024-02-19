@@ -29,9 +29,9 @@ export default function Navbar() {
 	}, [])
 
 	return (
-		<div className='fixed p-3 w-full z-10 ease-in duration-300 ' style={{backgroundColor: `${color}`}}>
+		<div className='fixed p-3 w-full z-10 ease-in duration-300 z-10' style={{backgroundColor: `${color}`}}>
 			<div className='max-w-[1240px] m-auto flex justify-between items-center'>
-				<Link href='/'>
+				<Link href='/' className="z-10">
 					<Image className="fill-current text-white" src={logo} alt="Service Schedule white outline logo." width={150} height={100} />
 					{/* <h1 style={{color: `${textColor}`}}>Service Schedule BG</h1> */}
 				</Link>

@@ -67,6 +67,11 @@ html {
   animation: fadeInLeftToRight 2s ease-in-out forwards;
 }
 
+.responsive-h1 {
+  font-size: clamp(1.5rem, 75vw, 5rem); 
+}
+
+
 
 /* Animations */
 

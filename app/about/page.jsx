@@ -48,20 +48,20 @@ export default function About () {
         <div>
             <div className="flex items-center justify-center h-[80vh] bg-fixed object-fill about-img">
                 {/* Overlay */}
-                <div className="absolute top-0 left-0 right-0 bottom-0 w-3/4 h-[80vh] bg-gradient-to-r from-black to-transparent z-[2]" />
+                <div className="absolute top-0 left-0 right-0 bottom-0 w-3/4 h-[80vh] bg-gradient-to-r from-black to-transparent z-2" />
 
-                <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-evenly gap-3 z-10">
-                    <div className="flex-3 rounded-lg p-6">
-                        <h1 className="text-xl md:text-3xl lg:text-7xl animate-left-to-right text-orange-500 text-start">About Us </h1>
+                <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-evenly gap-3 z-2 w-full">
+                    <div className="flex-1 flex justify-center rounded-lg p-6">
+                        <h1 className="text-xl responsive-h1 animate-left-to-right text-orange-500 text-start z-3">About Us </h1>
                     </div>
 
-                    <div className="flex-2 rounded-lg flex items-center justify-center">
+                    <div className="flex-1 rounded-lg flex items-center justify-center md:justify-start lg:justify-start xl:justify-start">
                         <Image 
                             src="/images/spencer-davis-HZTveSqEkRQ-unsplash.png"
                             alt="Motorcycle rider"
                             width={500}
                             height={500}
-                            className="animate-right-to-left"
+                            className="animate-right-to-left w-full md:w-3/4 sm:w-3/4"
                         />
                     </div>
                 </div>
