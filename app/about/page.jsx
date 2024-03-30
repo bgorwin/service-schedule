@@ -70,7 +70,7 @@ export default function About () {
             <div className="container mx-auto pt-10 pb-10">
                 <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-3">
                     <div className="flex-1 bg-black rounded-lg p-6">
-                        <h1 className="text-2xl md:text-5xl lg:text-9xl text-white">Hey! <span className="block text-5xl md:text-3xl sm:text-2xl">I&aposm Brent and this is my project.</span></h1>
+                        <h1 className="text-2xl md:text-5xl lg:text-9xl text-white">Hey! <span className="block text-5xl md:text-3xl sm:text-2xl">Im Brent and this is my project.</span></h1>
                     </div>
 
                     <div className="flex-1 bg-orange-500 rounded-lg flex items-center justify-center ps-10 pe-10">
