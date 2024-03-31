@@ -4,24 +4,45 @@
 // has access to state and effects just like Page components
 // in the `pages` directory.
 import "tailwindcss/tailwind.css";
-import { AiOutlineCheckCircle } from "react-icons/ai";
+import { AiOutlineCheckCircle, AiOutlineArrowDown } from "react-icons/ai";
+
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
+// import Hero from "../components/Hero";
 import MediaText from "../components/MediaText";
 import BannerDivider from "../components/BannerDivider";
+import Image from "next/image";
+import heroImage from "../public/images/harley-davidson-qbpM-CLCRtg-unsplash.jpg";
+import secondHero from "../public/images/harley-davidson-QD6GvrDFPAA-unsplash.jpg"
 
 
 export default function HomePage() {
 	return (
 		<div className=' text-white bg-black'>
 			<Navbar />
-			<Hero
+			{/* <Hero
 				heading='Service Schedule'
 				message='Organize and prioritize all your service orders'
 				image="custom-img"
 				buttonLink="/customers"
 				buttonText="View Workorders"
-			/>
+			/> */}
+
+			
+			<div className="grid grid-cols-4 grid-rows-5 gap-4 h-[80%] pt-[120px] pb-10">
+				<div className="col-span-2 row-span-3 flex justify-center items-center rounded-xl border border-orange-500">
+					<h1 className="text-5xl text-orange-500">Service Schedule</h1>
+				</div>
+				<div className="col-span-2 row-span-5 col-start-3">
+					<Image className="rounded-xl" src={heroImage} width={1200} height={1200} alt="hero image" />
+				</div>
+				<div className="row-span-2 row-start-4">
+					<Image className="rounded-xl" src={secondHero} width={1200} height={1200}  alt="hero image" />
+				</div>
+				<div className="row-span-2 row-start-4 flex justify-center items-center bg-white rounded-xl">
+					<AiOutlineArrowDown className="text-8xl rotate-[-45deg] text-orange-500" />
+				</div>
+			</div>
+    
 
 			<section className='py-40 flex flex-col items-center justify-center bg-white w-screen'>
 				<div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-5 text-black rounded-md bg-gray-200'>
