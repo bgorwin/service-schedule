@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 
 export default function BannerDivider() {
     return (
@@ -9,7 +10,7 @@ export default function BannerDivider() {
                         <p className="text-base text-center md:text-start lg:text-start">See how Service Schedule can help with your department.</p>
                     </div>
                     <div className="py-5">
-                        <a href="#" className="py-3 px-5 border border-white rounded-md hover:bg-black hover:text-white">Connect With Us</a>
+                        <Link href="/about" className="py-3 px-5 border border-white rounded-md hover:bg-black hover:text-white">Connect With Us</Link>
                     </div>
                 </div>
             </div>

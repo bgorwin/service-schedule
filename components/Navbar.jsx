@@ -1,67 +1,51 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+// import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import logo from '../public/images/white-logo.png';
 
 export default function Navbar() {
-	const [nav, setNav] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-	const [color, setColor] = useState('rgba(0,0,0,0.3)');
-	const [textColor, setTextColor] = useState('#fff');
+    return (
+        <nav className="bg-black text-white z-10">
+            <div className="max-w-6xl mx-auto px-4">
+                <div className="flex justify-between">
+                    <div className="flex space-x-4 justify-between w-full">
+                        {/* Logo or brand name */}
+                        <div>
+                            <Link href="/" className="flex items-center py-5 px-2 text-white">
+								<Image className="fill-current text-white" src={logo} alt="Service Schedule white outline logo." width={150} height={100} />
+                            </Link>
+                        </div>
 
-	const handleNav = () => {
-		setNav(!nav);
-	}
+                        {/* Primary nav items - hidden on mobile */}
+                        <div className="hidden md:flex lg:flex items-center space-x-1">
+							<Link href="/schedule" className="py-5 px-3 hover:text-orange-500">View Workorders</Link>
+                            <Link href="/about" className="py-5 px-3 hover:text-orange-500">About</Link>
+                            {/* <Link href="/contact" className="py-5 px-3">Contact</Link> */}
+                        </div>
+                    </div>
 
-	useEffect(() => {
-		const changeColor = () => {
-			if(window.scrollY > 90){
-				setColor('#000000');
-				setTextColor('#fff')
-			} else {
-				setColor('rgba(0,0,0,0.3)')
-				setTextColor('#fff')
-			}
-		};
-		window.addEventListener('scroll', changeColor)
-	}, [])
+                    {/* Mobile menu button */}
+                    <div className="md:hidden flex items-center">
+                        <button onClick={() => setIsOpen(!isOpen)}>
+                            <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-	return (
-		<div className='fixed p-3 w-full z-10 ease-in duration-300 z-10' style={{backgroundColor: `${color}`}}>
-			<div className='max-w-[1240px] m-auto flex justify-between items-center'>
-				<Link href='/' className="z-10">
-					<Image className="fill-current text-white" src={logo} alt="Service Schedule white outline logo." width={150} height={100} />
-					{/* <h1 style={{color: `${textColor}`}}>Service Schedule BG</h1> */}
-				</Link>
+            {/* Mobile menu items */}
+            <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
+				<Link href="/" className="block py-2 px-4 text-sm hover:text-orange-500">Home</Link>
+				<Link href="/schedule" className="block py-2 px-4 text-sm hover:text-orange-500">View Workorders</Link>
+                <Link href="/about" className="block py-2 px-4 text-sm hover:text-orange-500">About</Link>
+            </div>
+        </nav>
+    );
+};
 
-				<ul className='hidden sm:flex'>
-					<li className='p-4' style={{color: `${textColor}`}}>
-						<Link href='/customers' className="hover:text-orange-500 ">View Workorders</Link>
-					</li>
-					<li className='p-4' style={{color: `${textColor}`}}>
-						<Link href='/about' className="hover:text-orange-500 ">About</Link>
-					</li>
-				</ul>
-
-				{/* Mobile Button */}
-				<div onClick={handleNav} className='block sm:hidden z-10'>
-					{nav ? <AiOutlineClose size={20} style={{color: `${textColor}`}} className='z-10' /> : <AiOutlineMenu size={20} style={{color: `${textColor}`}} className='z-10' />}
-				</div>
-
-				{/* Mobile Menu */}
-				<div className={nav ? 'sm:hidden bg-slate-700 absolute top-0 right-0 bottom-0 flex justify-center items-center w-full h-screen  text-center ease-in-out duration-300 -translate-x' : 'absolute top-0 left-[-100%]  bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in-out duration-300 -translate-x'}>
-					<ul>
-						<li className='p-4 text-4xl hover:text-gray-500 ease-in-out duration-300'>
-							<Link href='/customers'>View Customers</Link>
-						</li>
-						{/* <li className='p-4 text-4xl hover:text-gray-500 ease-in-out duration-300'>
-							<Link href='/schedule'>View Schedule</Link>
-						</li> */}
-					</ul>
-				</div>
-			</div>
-		</div>
-	);
-}

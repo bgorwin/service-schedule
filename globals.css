@@ -23,14 +23,14 @@ html {
 }
 
 .about-img {
-  background-image: url('./public/images/natasha-miller-KGlqPl1fXj8-unsplash.jpg');
+  background-image: url('./public/images/sumit-saharkar-d3_ssraccV8-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .media-text-image-1 {
-  background-image: url('./public/images/aditya-joshi-EfdSPgdE958-unsplash.jpg');
+  background-image: url('./public/images/gijs-coolen-Gsu0ChkpYg4-unsplash.jpg');
   background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,10 +67,17 @@ html {
   animation: fadeInLeftToRight 2s ease-in-out forwards;
 }
 
-.responsive-h1 {
-  font-size: clamp(1.5rem, 75vw, 5rem); 
+.fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
+.fade-in-slow {
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+.fade-in-slower {
+  animation: fadeIn 4s ease-in-out forwards;
+}
 
 
 /* Animations */
@@ -94,5 +101,14 @@ html {
   to {
       opacity: 1;
       transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

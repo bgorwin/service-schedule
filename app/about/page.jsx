@@ -46,23 +46,13 @@ export default function About () {
 
     return (
         <div>
-            <div className="flex items-center justify-center h-[80vh] bg-fixed object-fill about-img">
+            <div className="flex relative items-center justify-center h-[80vh] bg-fixed object-fill about-img">
                 {/* Overlay */}
                 <div className="absolute top-0 left-0 right-0 bottom-0 w-3/4 h-[80vh] bg-gradient-to-r from-black to-transparent z-2" />
 
-                <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-evenly gap-3 z-2 w-full">
-                    <div className="flex-1 flex justify-center rounded-lg p-6">
-                        <h1 className="text-xl responsive-h1 animate-left-to-right text-orange-500 text-start z-3">About Us </h1>
-                    </div>
-
-                    <div className="flex-1 rounded-lg flex items-center justify-center md:justify-start lg:justify-start xl:justify-start">
-                        <Image 
-                            src="/images/spencer-davis-HZTveSqEkRQ-unsplash.png"
-                            alt="Motorcycle rider"
-                            width={500}
-                            height={500}
-                            className="animate-right-to-left w-full md:w-3/4 sm:w-3/4"
-                        />
+                <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-center gap-3 z-2 w-full">
+                    <div className="container flex-1 flex item-start justify-center md:justify-start lg:justify-start rounded-lg p-6">
+                        <h1 className="text-7xl animate-left-to-right text-orange-500 text-start z-3">About Us </h1>
                     </div>
                 </div>
             </div>
@@ -70,11 +60,18 @@ export default function About () {
             <div className="container mx-auto pt-10 pb-10">
                 <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-3">
                     <div className="flex-1 bg-black rounded-lg p-6">
-                        <h1 className="text-2xl md:text-5xl lg:text-9xl text-white">Hey! <span className="block text-5xl md:text-3xl sm:text-2xl">Im Brent and this is my project.</span></h1>
+                        <h1 className="text-2xl md:text-5xl lg:text-9xl text-white">Hey! <span className="block text-5xl md:text-3xl sm:text-2xl">I'm Brent and this is my project.</span></h1>
                     </div>
 
-                    <div className="flex-1 bg-orange-500 rounded-lg flex items-center justify-center ps-10 pe-10">
-                        <p className="text-lg">With a passion for motorcycles and Web Development, this program helps with the service department aspect of making sure you provide the best customer experience.</p>
+                    <div className="flex-1 bg-orange-500 rounded-lg flex items-center justify-center p-6">
+                        <div>
+                            <p className="text-lg mb-5">I&apos;m a passionate Frontend Developer with a love for motorcycles. My fascination with two-wheelers isn&apos;t just a hobby; it&apos;s a lifestyle that fuels my creativity and drives my work.</p>
+
+                            <p className="text-light font-semibold bg-orange-600 ps-2 pe-2 pt-1 pb-1 inline-block rounded-t">About This Project</p>
+                            <p className="text-normal bg-orange-600 p-3 rounded-b rounded-tr">
+                                This project is a specialized service department tool designed to streamline motorcycle repair tracking and enhance communication with customers. It&apos;s built to ensure that every repair job is efficiently managed and that customers are always in the loop about the status of their beloved bikes. With my background in frontend development and my deep understanding of the motorcycle community, I&apos;ve crafted a solution that blends technical precision with user-friendly design, making the repair process smoother for both technicians and customers.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

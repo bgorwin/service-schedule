@@ -40,7 +40,7 @@ const WorkorderList = ({ data: initialData }) => {
     };
 
     return (
-        <div className="container mx-auto my-8">
+        <div className="container m-4 md:mx-4 my-8 overflow-x-auto">
             <h1 className="text-3xl font-bold mb-4">Motorcycle Check-In Status</h1>
             <table className="w-full mt-4">
                 <thead className="bg-orange-400 text-white">
@@ -71,10 +71,10 @@ const WorkorderList = ({ data: initialData }) => {
                 </tbody>
             </table>
               
-            <div className="container mx-auto pt-10 pb-10">
+            <div className="container md:container md:mx-auto sm:container sm:mx-auto mx-auto pt-10 pb-10">
                 <p className="text-xl">Add a New Customer</p>
                 <hr />
-                <form onSubmit={handleSubmit} className="flex flex-row mb-6 mt-6 gap-5">
+                <form onSubmit={handleSubmit} className="flex flex-wrap mb-6 mt-6 gap-5">
                     <div>
                         <input
                             type="text"
