@@ -83,6 +83,7 @@ const WorkorderList = ({ data: initialData }) => {
                             onChange={handleInputChange}
                             placeholder="Name"
                             className="shadow border rounded py-2 px-3 text-grey-darker"
+                            required
                         />
                     </div>
                     <div>
@@ -93,6 +94,7 @@ const WorkorderList = ({ data: initialData }) => {
                             onChange={handleInputChange}
                             placeholder="Motorcycle"
                             className="shadow border rounded py-2 px-3 text-grey-darker"
+                            required
                         />
                     </div>
                     <div>
@@ -103,6 +105,7 @@ const WorkorderList = ({ data: initialData }) => {
                             onChange={handleInputChange}
                             placeholder="Status"
                             className="shadow border rounded py-2 px-3 text-grey-darker"
+                            required
                         />
                     </div>
                     <div>
@@ -112,6 +115,7 @@ const WorkorderList = ({ data: initialData }) => {
                             value={formData.dateCheckedIn}
                             onChange={handleInputChange}
                             className="shadow border rounded py-2 px-3 text-grey-darker"
+                            required
                         />
                     </div>
                     <button type="submit" className="border border-orange-400 text-black hover:bg-black hover:text-white px-2 py-1 rounded-md transition duration-200">
