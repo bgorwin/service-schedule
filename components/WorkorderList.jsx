@@ -54,7 +54,7 @@ const WorkorderList = ({ data: initialData }) => {
                 </thead>
                 <tbody>
                     {items.map((item) => (
-                        <tr key={item.id} className="bg-gray-100">
+                        <tr key={item.id} className="odd:bg-gray-100 even:bg-white">
                             <td className="border p-2">{item.name}</td>
                             <td className="border p-2">{item.motorcycle}</td>
                             <td className="border p-2">{item.status}</td>
