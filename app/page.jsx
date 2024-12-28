@@ -43,8 +43,8 @@ export default function HomePage() {
 			</div>
     
 
-			<section className='py-40 flex flex-col items-center justify-center bg-white w-screen '>
-				<div className="container mx-auto">
+			<section className='py-40 flex flex-col items-center justify-center bg-white w-screen'>
+				<div className="container mx-[20px]">
 					<div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-5 text-black rounded-md bg-gray-200'>
 						<div className='p-3 flex flex-col justify-center align-center'>
 							<p className='text-gray-600 text-lg ps-1 underline underline-offset-4 mb-2'>
