@@ -80,7 +80,7 @@ export default function About () {
                 <p className="text-xl text-center">Find out what our clients and their customers are saying!</p>
                 <div className="container mx-auto flex overflow-x-auto space-x-4 p-4">
                     {reviews.map(review => (
-                        <div key={review.id} className="min-w-max"> 
+                        <div key={review.id} className="min-w-max scroll"> 
                             <Review {...review} />
                         </div>
                     ))}
