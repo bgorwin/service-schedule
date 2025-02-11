@@ -120,9 +120,13 @@ html {
 @keyframes scroll {
   0% {
     transform: translateX(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
     /* Adjust the translation based on the total width of your duplicated content */
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
 }
