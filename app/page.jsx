@@ -98,6 +98,7 @@ export default function HomePage() {
 			<section className="py-36 bg-white">
 				<div className="container mx-auto">
 					<h2 className="font-bold text-orange-600 text-4xl text-center">How It Works</h2>
+					<p className="font-normal text-center">This product is to benefit your service department and is built to orgainize your department</p>
 					<hr className="w-56 h-1 bg-black mx-auto mt-4 mb-8" />
 					<div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-between mt-8">
 						<div className="col px-4 my-5">
