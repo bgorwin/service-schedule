@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
 import Review from '../../components/Review';
+import Hero from '../../components/Hero';
 
 
 export default function About () {
@@ -46,16 +47,8 @@ export default function About () {
 
     return (
         <div>
-            <div className="flex relative items-center justify-center h-[80vh] bg-fixed object-fill about-img">
-                {/* Overlay */}
-                <div className="absolute top-0 left-0 right-0 bottom-0 w-3/4 h-[80vh] bg-gradient-to-r from-black to-transparent z-2" />
-
-                <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-center gap-3 z-2 w-full">
-                    <div className="container flex-1 flex item-start justify-center md:justify-start lg:justify-start rounded-lg p-6">
-                        <h1 className="text-7xl animate-left-to-right text-orange-500 text-start z-3">About Us </h1>
-                    </div>
-                </div>
-            </div>
+            <Hero heading="About Us" image="about-img" buttonText="" buttonLink="/" />
+            
 
             <div className="container mx-auto pt-10 pb-10">
                 <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-3">
