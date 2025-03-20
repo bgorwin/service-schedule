@@ -16,7 +16,7 @@ export default function Footer() {
                         <Image className="fill-current text-white" src={logo} alt="Service Schedule white outline logo." width={150} height={100} />
                     </div>
                     <div className="text-center md:text-end lg:text-end text-orange-500">
-                        <p>&copy; {currentYear} Brent Gorwin All rights reserved. </p>
+                        <p>&copy; {currentYear} Brent Gorwin All rights reserved.. </p>
                     </div>
                 </div>
             </div>
