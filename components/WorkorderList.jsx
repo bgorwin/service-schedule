@@ -7,9 +7,16 @@ const WorkorderList = ({ data: initialData }) => {
     const [formData, setFormData] = useState({
         name: '',
         motorcycle: '',
-        status: '',
+        status: [
+            "Checked In",
+            "On lift",
+            "Waiting for parts",
+            "Done"
+        ],
         dateCheckedIn: '',
     });
+
+    
 
     // Assign unique IDs to initial data if not already present
     const assignIds = (data) => data.map((item, index) => ({ ...item, id: item.id || index }));
@@ -24,7 +31,7 @@ const WorkorderList = ({ data: initialData }) => {
         const { name, value } = e.target;
         setFormData(prevFormData => ({
             ...prevFormData,
-            [name]: value
+            [name]: value,
         }));
     };
 
@@ -32,7 +39,7 @@ const WorkorderList = ({ data: initialData }) => {
         e.preventDefault();
         const newItem = { ...formData, id: Date.now() }; // Ensure new item has a unique ID
         setItems([...items, newItem]);
-        setFormData({ name: '', motorcycle: '', status: '', dateCheckedIn: '' });
+        setFormData({ name: '', motorcycle: '', status: [], dateCheckedIn: '' });
     };
 
     const handleDelete = (id) => {
@@ -57,7 +64,17 @@ const WorkorderList = ({ data: initialData }) => {
                         <tr key={item.id} className="odd:bg-gray-100 even:bg-white">
                             <td className="border p-2">{item.name}</td>
                             <td className="border p-2">{item.motorcycle}</td>
-                            <td className="border p-2">{item.status}</td>
+                            {/* <td className="border p-2">{item.status}</td> */}
+                            <td className="border p-2">
+                                <select value={items.status}>
+                                    {item.status.map((option, index) => (
+                                        <option key={index} value={option}>
+                                            {option}
+                                        </option>
+                                    ))}
+                                </select>
+                                
+                            </td>
                             <td className="border p-2">{item.dateCheckedIn}</td>
                             <td className="border p-2">
                                 <button
@@ -97,17 +114,7 @@ const WorkorderList = ({ data: initialData }) => {
                             required
                         />
                     </div>
-                    <div>
-                        <input
-                            type="text"
-                            name="status"
-                            value={formData.status}
-                            onChange={handleInputChange}
-                            placeholder="Status"
-                            className="shadow border rounded py-2 px-3 text-grey-darker"
-                            required
-                        />
-                    </div>
+                    
                     <div>
                         <input
                             type="date"

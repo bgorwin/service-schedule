@@ -2,25 +2,45 @@
     {
         "name": "Brent G",
         "motorcycle": "2021 Honda Monkey",
-        "status": "Checked In",
-        "dateCheckedIn": "10-31-2023"
+        "status": [
+            "Checked In",
+            "On lift",
+            "Waiting for parts",
+            "Done"
+        ],
+        "dateCheckedIn": "2023-10-31"
     },
     {
         "name": "John D",
         "motorcycle": "2023 Harley Softtail",
-        "status": "Checked In",
-        "dateCheckedIn": "10-25-2023"
+        "status": [
+            "Checked In",
+            "On lift",
+            "Waiting for parts",
+            "Done"
+        ],
+        "dateCheckedIn": "2023-10-25"
     },
     {
         "name": "Richard",
         "motorcycle": "2020 Harley Fatbob ",
-        "status": "Checked In",
-        "dateCheckedIn": "10-1-2023"
+        "status": [
+            "Checked In",
+            "On lift",
+            "Waiting for parts",
+            "Done"
+        ],
+        "dateCheckedIn": "2023-10-20"
     },
     {
         "name": "Russ",
         "motorcycle": "2022 Harley Street Glide CVO ",
-        "status": "Checked In",
-        "dateCheckedIn": "10-1-2023"
+        "status": [
+            "Checked In",
+            "On lift",
+            "Waiting for parts",
+            "Done"
+        ],
+        "dateCheckedIn": "2025-3-20"
     }
 ] 
